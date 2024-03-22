@@ -16,7 +16,7 @@
   //랜덤 범위 정수값 공식
   x이상 y이하의 랜덤정수 생성ㅇ
 
-  Math.floor(Math.random() * (y - x + 1)) + x);
+  Math.floor((Math.random() * (y - x + 1)) + x);
   # 117 ~ 142
   Math.floor(Math.random() * (142 - 117 + 1)) + 117);
   Math.floor(Math.random() * 26)) + 117);
