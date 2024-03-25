@@ -2,7 +2,7 @@
 var x = '30', y = '40';
 
 var result = Number(x) + Number(y);
-// parseInt는 문자를 숫자로 바꿀때 성수로 바꾼다
+// parseInt는 문자를 숫자로 바꿀때 정수로 바꾼다
 // parseDouble을 사용하면 소수점을 지킬 수 있음.
 var result2 = parseInt(x) + parseInt(y);
 var result3 = +x + +y;
