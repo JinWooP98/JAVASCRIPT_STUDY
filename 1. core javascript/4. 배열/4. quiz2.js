@@ -20,7 +20,6 @@ while (arrayes.length < 6) {
 
   if (userNum === '그만') break;
 
-  // alert(typeof +userNum)
   if (isNaN(+userNum)) continue;
 
   arrayes.push(+userNum);

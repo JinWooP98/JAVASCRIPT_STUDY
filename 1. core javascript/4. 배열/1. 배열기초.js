@@ -24,7 +24,7 @@ console.log(arr);
 // 배열 데이터 수 확인
 console.log(arr.length);
 
-console.log(`첫번째 데이터 : ${arr[0]}`);
+console.log(`첫번째 데이터 : ${typeof arr[0]}`);
 console.log(`마지막 데이터 : ${arr[arr.length - 1]}`);
 
 // 배열 데이터 순회 (전체참조: travis)
