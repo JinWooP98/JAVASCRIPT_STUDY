@@ -43,7 +43,7 @@ function callName(nickName) {
   var prohibits = ['바로', '멍청이', '메롱'];
   if (prohibits.includes(nickName)) {
     console.log(`나쁜말 쓰지 마세요!!!`);
-    return; // 반문의 break같은 역할 아무것도 반환안하고 그냥 return만 쓰고 닫았을때
+    return; // 반복문의 break같은 역할 아무것도 반환안하고 그냥 return만 쓰고 닫았을때
   }
   console.log(`${nickName}님 안녕하세요!!`);
 }
