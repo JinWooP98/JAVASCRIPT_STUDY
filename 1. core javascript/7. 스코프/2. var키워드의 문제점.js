@@ -10,8 +10,7 @@
 // console.log(x);
 
 // 2. 블록 레벨 스코프를 지원하지 않음
-let i = '메롱';
-
+let i = '메롱'
 for (let i = 0; i < 5; i++) {
   console.log(`for - 1 : ${i}`);
 }
@@ -24,6 +23,6 @@ hobby = `댄스`;
 
 // .... code
 
-let hobby;
+var hobby;
 
 console.log(hobby);
