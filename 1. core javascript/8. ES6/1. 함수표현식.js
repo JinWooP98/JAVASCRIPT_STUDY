@@ -32,7 +32,7 @@ log(`zzz`);
 // 함수를 변수 형태처럼 만들 수 있다. --> 함수 표현식
 const multiply = function (n1, n2) {
   return n1 * n2;
-}
+};
 
 const r3 = multiply(3, 4);
 console.log(`r3: ${r3}`);
