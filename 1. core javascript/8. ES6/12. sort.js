@@ -57,7 +57,7 @@ userList.sort((a, b) => a.age - b.age);
 console.log(userList);
 
 userList.sort((a, b) => {
-  if(a.userName > b.userNAme) return 1;
+  if(a.userName > b.userName) return 1;
   else if (a.userName < b.userName) return -1;
   else return 0;
 }); // 이름 오름차
