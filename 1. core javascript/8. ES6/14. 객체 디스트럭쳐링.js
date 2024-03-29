@@ -33,6 +33,10 @@ console.log(bgColor);
 console.log(`=======================================`);
 
 const dog = {
+  person : {
+    mom : dsklf,
+    fater : dsaf
+  },
   kind : `말티즈`,
   name : `해피`,
   age : 3,

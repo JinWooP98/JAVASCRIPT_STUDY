@@ -1,3 +1,2 @@
-
-const x = 5 , y = 7 ;
-console.log(x - y);
+let n;
+console.log(2-n === -n+2);

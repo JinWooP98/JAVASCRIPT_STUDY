@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="fruits">
+    <li class="f-item ap">사과</li>
+    <li class="f-item bn">바나나</li>
+    <li class="f-item gp">포도</li>
+    <li class="f-item pc">복숭아</li>
+  </ul>
+
+  <script>
+    // getElementById가 querySelector이 약간 더 빠름, 아이디가 있다면 gEBI를 쓰는것이 좋다.
+    // const $grape = document.querySelector(`#fruits li:nth-child(3)`);
+    const $grape = document.querySelector(`.bn + li`);
+    console.log($grape);
+
+    $grape.textContent = '맛있는 포도';
+
+    const $fItemList = [...document.querySelectorAll(`.f-item`)];
+    console.log($fItemList);  // --> Prototype : node list
+    console.log([1, 2, 3]); // --> prototype : array
+
+    // for (const $f of $fItemList) {
+    //   $f.style.color = `red`;
+    // }
+
+    $fItemList.forEach($f => {
+      $f.style.color = 'blue';
+      $f.style.backgroundColor = 'violet';
+      $f.style.width = `80%`;
+    });
+
+    // $fItemList.pop();
+
+    // 유사 배열: 객체 형태를 유지한 배열
+    // 객체 처럼 쓸수도 있고, 배열처럼 사용할수도 있음, ... push pop등은 못씀
+    const foods = {
+      0: `짜장면`,
+      1: `짬뽕`,
+      2: '볶음밥',
+      length : 3
+    };
+    console.log(food[0]);
+  </script>
+</body>
+</html>
