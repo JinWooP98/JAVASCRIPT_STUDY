@@ -267,9 +267,10 @@ console.log(trsDataByName);
 */
 console.log(`======================================================================================`);
 
-const result = traders.reduce((acc, trs) => {
+const result = traders.reduce((acc, {trader, year}) => {
   // 연도별 거래자 거래 횟수 집계
-  const key = `${trs.year}_${trs.trader.name}`;
+  const {name} = trader;
+  const key = `${year}_${name}`;
 
   if(!acc[key]) {
   acc[key] = 1;
@@ -278,9 +279,9 @@ const result = traders.reduce((acc, trs) => {
   }
 
   // 연도별 최대 거래 횟수 찾기
-  const yearMaxkey = `max_${trs.year}`;
+  const yearMaxkey = `max_${year}`;
   if(!acc[yearMaxkey] || acc[key] > acc[yearMaxkey.count]) {
-    acc[yearMaxkey] = {name : trs.trader.name, count : acc[key]}
+    acc[yearMaxkey] = {name, count : acc[key]}
   }
 
   return acc;
@@ -319,11 +320,12 @@ console.log(result);
 9. **각 도시에서 진행된 거래의 수를 계산해주세요. 결과는 `{도시이름: 거래수}` 형태의 객체여야 합니다.**
 
 */
- const trsCountByCity = traders.reduce((acc, trs) => {
-  if (!acc[trs.trader.city]) {
-    acc[trs.trader.city] =1;
+ const trsCountByCity = traders.reduce((acc, {trader}) => {
+  const {city} = trader
+  if (!acc[city]) {
+    acc[city] =1;
   } else {
-    acc[trs.trader.city]++;
+    acc[city]++;
   }
   return acc;
  }, {})
