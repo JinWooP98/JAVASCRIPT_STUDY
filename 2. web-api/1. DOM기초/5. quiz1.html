@@ -23,17 +23,16 @@
     <script>
         //1. id="list1"인 요소에 <li> 요소중  
         //    홀수번째 요소만 선택후 배경색상 yellow 적용
-        const $one =[...document.querySelectorAll('#list1 li:nth-child(odd)')];
-        for(let $o of $one) {
-          $o.style.backgroundColor = 'yellow';
-        };
-       
+        const $odd = [...document.querySelectorAll(`#list1 li:nth-child(odd)`)];
+        for(let $o of $odd) {
+          $o.style.backgroundColor = `yellow`;
+        }
         //2. id="list1"인 요소에 <li> 요소중
         //   짝수번째 요소만 선택후 배경색상 gray 적용  
-        const $two =[...document.querySelectorAll('#list1 li:nth-child(even)')];
-        for(let $t of $two) {
-          $t.style.backgroundColor = 'gray';
-        };
+          const $even = [...document.querySelectorAll(`#list1 li:nth-child(even)`)];
+          for(let $e of $even) {
+            $e.style.backgroundColor = 'gray';
+          }
         
         //3. id="list1"인 요소에 <li> 요소중   
         //  첫번째 <li>요소만 선택후 폰트색상 red 적용  
