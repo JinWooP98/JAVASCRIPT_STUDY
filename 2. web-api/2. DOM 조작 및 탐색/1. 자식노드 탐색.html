@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <ul id="fruits">
+    <li class="fr apple">사과</li>
+    <li class="fr banana">바나나</li>
+    <li class="fr grape">포도</li>
+  </ul>
+
+  <div class="box">
+
+  </div>
+
+  
+  <script>
+    const $ul = document.getElementById('fruits');
+    // <!-- childNodes는 공백도 자식으로 판단... 따라서 children을 많이 사용 -->
+    // children은 가져올때 유사배열로 가져옴 따라서 [...$children]을 사용하면 더 편하게 관리 조작 가능
+    const $children = [...$ul.children];
+    console.log($children);
+
+    // 첫 번째 자식 노드를 반환(but, 공백도 자식으로 쳐짐, childNodes의 첫번째 자식으로 쳐지는 것)
+    const $first = $ul.firstChild;
+    console.log($first);
+
+    // 첫 번째 자식 노드 반환(공백도 자식으로 치는 firstchild보단, firstElementChild를 쓰는것이 더 낫다)
+    const $first1 = $ul.firstElementChild;
+    console.log($first1);
+    const $last = $ul.lastElementChild;
+
+    $first1.style.fontSize = `2em`;
+    $last.style.color = 'violet';
+// ==========================================================================================================
+
+    // !!는 숫자를 논리로 바꿔주는 역할, 0이면 false 그외는 true.
+    function hasChildren($tag) {
+      // return $tag.children.lengt > 0;
+      return !!$tag.children.length;
+    }
+
+
+    const $box = document.querySelector('.box');
+    console.log($box.children);
+    // hasChildrenNodes()는 자식요소가 있냐 없냐를 나타냄. (but... 공백도 자식이 있다고 표현한다.)
+    // 따라서 hasChildren 함수를 만들어서 표현하는 것도 가능.
+    console.log(hasChildren($box));
+  
+    </script>
+</body>
+</html>
