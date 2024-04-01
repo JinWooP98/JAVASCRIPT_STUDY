@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>실시간 배경색 변경</title>
+</head>
+<body>
+
+  <input type="text" id="colorInput" placeholder="색상 이름이나 HEX 코드를 입력하세요">
+  <div id="warning" style="color: red; display: none;">유효하지 않은 색상입니다!</div>
+
+  <script>
+    const $input = document.getElementById('colorInput');
+    const $warning = document.getElementById('warning');
+
+    $input.addEventListener('input', () => {
+      // console.log($input.value);
+
+      document.body.style.background = $input.value;
+
+      // 입력값이 이상하다?
+      if(document.body.style.background !== $input.value || $input.value === '') {
+        document.getElementById('warning').style.display = 'block'
+      } else {
+        document.getElementById('warning').style.display = 'none'
+      }
+    });
+  </script>
+
+</body>
+</html>
+
+
+<!-- <!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .input {
+      border: 5px solid blue;
+      height: 30px;
+      width: 300px;
+    }
+  </style>
+</head>
+<body>
+  <input class ='input' type="text" placeholder="색상 이름이나 HEX 코드를 입력하세요.">
+
+  <script>
+    const $body = document.querySelector('body');
+    const $input = document.querySelector('.input');
+
+    const changeBg = () => {
+     return $body.style.background = $input.value;
+    }
+
+    console.log($input.textContent);
+    $input.addEventListener('input', changeBg);
+  </script>
+</body>
+</html> -->
