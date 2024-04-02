@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <p class="msg"></p>
+
+  <p id="clock"></p>
+
+  <script>
+    const $p = document.querySelector('.msg');
+    const $clock = document.getElementById('clock');
+
+    // 현재 시간 가져오기
+    setInterval(() => {
+      const now = new Date();
+      $clock.textContent = now.toLocaleTimeString();
+    }, 1000);
+
+    // 반복하는 와중에 아래 코드들 실행
+    // setInterval(() => {
+    //   $p.textContent += '안녕~\n'
+    // }, 500);
+
+    for(let i = 0; i < 5; i++) {
+      console.log(i);
+    }
+  </script>
+</body>
+</html>

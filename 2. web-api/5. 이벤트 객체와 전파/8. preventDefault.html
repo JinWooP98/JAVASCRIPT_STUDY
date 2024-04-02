@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  
+  <a id="link" href="https://github.com">깃허브로 이동</a>
+
+  <form id="my-form" action="https://google.com">
+    <input type="text" placeholder="이메일을 쓰세요.">
+    <button type="submit"></button>
+  </form>
+
+  <script>
+    const $link = document.getElementById('link');
+
+    $link.addEventListener('click', e => {
+      if (!confirm('깃허브로 이동합니까?')) {
+        e.preventDefault(); // 태그의 기본 자바스크립트 기능 중지
+        // return; //a 링크 자체에 링크가 있어, 클릭함수를 안만들어도 이동이 됨
+      }
+    });
+
+    const $form = document.getElementById('my-form');
+
+    $form.addEventListener('submit', e => {
+      e.preventDefault(); // submit기능 해제
+      if ($form.firstElementChild.value === '') {
+        return;
+      } else {
+      $form.submit();
+      }
+    })
+  </script>
+
+</body>
+</html>
