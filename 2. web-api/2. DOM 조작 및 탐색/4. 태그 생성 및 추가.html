@@ -17,6 +17,11 @@
     function makeNewTag(tagName='div', options={}) {
       const $newTag = document.createElement(tagName);
       if(options.text) $newTag.textContent = options.text;
+      if(options.attr) {
+        for (const at in options.attr) {
+          $newTag.setAttribute(at, options.attr[at]);
+        }
+      }
       return $newTag;
     }
 
@@ -26,7 +31,7 @@
     }
 
     const $ul = document.getElementById('fruits');
-    append($ul, 'li', { text: '바나나'});
+    append($ul, 'li', { text: '바나나', attr: {id: 'abc', 'class': 'box red'}});
     append($ul, 'li', { text: '망고'});
     append($ul, 'li', { text: '오렌지'});
 
