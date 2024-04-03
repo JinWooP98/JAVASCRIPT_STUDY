@@ -1,2 +1,2 @@
-let n;
-console.log(2-n === -n+2);
+let a = 'asdfasdfasdf'
+console.log(a.length);
