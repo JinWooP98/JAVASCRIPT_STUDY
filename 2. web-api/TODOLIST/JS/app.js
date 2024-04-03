@@ -5,13 +5,13 @@
 // 4. 수정기능, 수정버튼을 누르면 수정 모드로 진입
 // 4-1. 수정 내용 입력 후 v버튼이나 엔터 누르면 수정되도록
 
-// =============== 지역 변수 영역 =============== //
+// =============== 전역 변수 영역 =============== //
 const $ul = document.querySelector(".todo-list");
 const toDoList = [...$ul.children];
 const $addBtn = document.getElementById('add');
 const $addToDolist = document.getElementById("todo-text");
 
-// =============== 함수 생성 영역 =============== //
+// =============== 함수 정의 영역 =============== //
 
 function addListFunc () {
   const $newList = document.createElement("li");
@@ -32,6 +32,11 @@ function addListFunc () {
     $addToDolist.value = '';
 }
 
+function isCheck () {
+  if(document.querySelector('#checkbox').firstElementChild.checked) {
+
+  }
+}
 // =============== 함수 호출 영역 =============== //
 // + 버튼 클릭시 TODOList 추가
 $addBtn.addEventListener("click", (e) => {
@@ -51,4 +56,9 @@ document.getElementById('todo-text').addEventListener('keyup', e => {
   } else {
     $addToDolist.style.background = null;
   }
+});
+
+// 체크박스 클릭시 글 스타일 변경
+document.querySelector('#checkbox').addEventListener('click', e => {
+
 });
