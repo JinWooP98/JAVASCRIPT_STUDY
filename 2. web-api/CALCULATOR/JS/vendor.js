@@ -41,7 +41,7 @@ const calculate = (operations) => {
     currentResult = currentResult * enteredNumber;
     operationStr = 'x';
   } else {
-    currentResult = (currentResult / enteredNumber).toFixed();
+    currentResult = parseInt(currentResult / enteredNumber);
     operationStr = '÷';
   }
   
@@ -56,7 +56,7 @@ const calculate = (operations) => {
   const $entrie = document.createElement('li');
   $entrie.classList.add('log-entries__item');
   $entrie.textContent = `#${order}. ${descriptionLog} = ${currentResult}`;
-  if([...$entries.children].length >= 3) {
+  if([...$entries.children].length >= 4) {
     $entries.removeChild($entries.firstElementChild);
   }
   $entries.appendChild($entrie);
