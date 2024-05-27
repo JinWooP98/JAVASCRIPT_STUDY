@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="84cdde6c-8b7c-4a8b-9fd8-c9fb30be02be" name="변경" comment="">
-      <change afterPath="$PROJECT_DIR$/3.AJAX/1.http요청과 응답처리.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/3.AJAX/2. Post요청 비동기통신.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/material_theme_project_new.xml" afterDir="false" />
+    <list default="true" id="84cdde6c-8b7c-4a8b-9fd8-c9fb30be02be" name="변경" comment="AJAX 학습 - 1">
+      <change afterPath="$PROJECT_DIR$/3.AJAX/3. 댓글 api 통신하기.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -55,11 +51,12 @@
     "DefaultHtmlFileTemplate": "HTML File",
     "JavaScript 디버그.1.http요청과 응답처리.html.executor": "Run",
     "JavaScript 디버그.2. Post요청 비동기통신.html.executor": "Run",
+    "JavaScript 디버그.3. 댓글 api 통신하기.html.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "js.last.introduce.type": "CONST",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/qwdk0/Desktop/choongang/JAVASCRIPT_STUDY",
+    "last_opened_file_path": "C:/Users/qwdk0/Desktop/choongang/springstudy",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -90,8 +87,17 @@
       <option name="presentableId" value="Default" />
       <updated>1712280681104</updated>
       <workItem from="1716774634153" duration="120000" />
-      <workItem from="1716774787475" duration="3912000" />
+      <workItem from="1716774787475" duration="5189000" />
     </task>
+    <task id="LOCAL-00001" summary="AJAX 학습 - 1">
+      <option name="closed" value="true" />
+      <created>1716779065595</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1716779065595</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -107,5 +113,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="AJAX 학습 - 1" />
+    <option name="LAST_COMMIT_MESSAGE" value="AJAX 학습 - 1" />
   </component>
 </project>
