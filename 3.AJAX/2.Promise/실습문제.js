@@ -18,6 +18,7 @@ const renderMovies = movieList => {
     $div.querySelector('.inner .year').textContent = movie.year;
     $div.querySelector('.inner .rating').textContent = movie.rating;
     $div.querySelector('img').src=movie.large_cover_image;
+    $div.querySelector('.movie').dataset.movieId = movie.id;
 
     $movieList.appendChild($div);
 
@@ -53,4 +54,30 @@ document.querySelector("header .gnb ul").addEventListener('click', e => {
     url = 'https://yts.mx/api/v2/list_movies.json?sort_by=like_count&order_by=desc';
     fetchMovies(url)
   }
+})
+
+// 영화 상세정보를 모달에 렌더링
+function makeMoviesDetailDOM({ title, small_cover_image, description_full}) {
+  const $modalTitle = document.querySelector('.modal-title');
+  const $descImage = document.querySelector('.desc-image');
+  const $summary = document.querySelector('.movie-description')
+
+  $modalTitle.textContent= title;
+  $descImage.src = small_cover_image;
+  $summary.textContent = description_full;
+}
+
+
+const $movie = document.querySelector(".movie-list");
+$movie.addEventListener('click', e => {
+  if(!e.target.matches('.movie-list .movie *')) return;
+
+  const movieId = e.target.closest('.movie').dataset.movieId;
+
+  fetch(`https://yts.mx/api/v2/movie_details.json?movie_id=${movieId}`)
+    .then(res => res.json())
+    .then(json => {
+      makeMoviesDetailDOM(json.data.movie)
+    })
+
 })
